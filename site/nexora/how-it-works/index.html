@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works — Nexora</title>
+<meta name="description" content="The record, the pipeline, the four human gates and the controls. Nothing becomes memory until a person says so.">
+<meta property="og:title" content="How it works — Nexora">
+<meta property="og:description" content="The record, the pipeline, the four human gates and the controls. Nothing becomes memory until a person says so.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/og.png">
+<meta name="theme-color" content="#8A1C3B">
+<link rel="icon" href="/nexora/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/nexora/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/nexora/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/nexora/assets/css/site.8c989ad5.css">
+<script defer data-domain="nibarc.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/nexora/" aria-label="Nexora home"><img src="/nexora/assets/brand/logo.026c141c.svg" alt="Nexora" width="448" height="102"></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav"><a href="/nexora/brief/">Brief</a><a href="/nexora/forge/">Forge</a><a href="/nexora/manage/">Manage</a><a href="/nexora/how-it-works/">How it works</a><a href="/nexora/deliverables/">Deliverables</a><a class="cta" href="/nexora/contact/">Bring a recording</a></nav>
+  </div>
+</header>
+<main>
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>Nothing becomes memory until a person says so.</h1>
+    <p class="lede">The record under the Brief, Forge and Manage: its layers, the pipeline, the four human gates and the controls. This is what Nexora does, how it is enforced, and what it refuses.</p>
+  </div>
+</section>
+
+<section class="section tight on-ink">
+  <div class="wrap grid grid-5-7" style="align-items:start">
+    <div class="stack">
+      <h2>Three layers. One source of truth.</h2>
+      <p class="lede">An append-only event log is the authority. A property graph is projected from it for reasoning. A vector index finds candidates by meaning, and is never the authority.</p>
+      <div class="claims" style="grid-template-columns:1fr;gap:16px">
+        <div><h4>Event log</h4><p>Facts are never updated; a new event supersedes. The source of truth.</p></div>
+        <div><h4>Property graph</h4><p>Typed nodes and edges the product reasons over, projected from the log.</p></div>
+        <div><h4>Vector index</h4><p>pgvector. Finds candidates by meaning. Never the authority.</p></div>
+      </div>
+    </div>
+    <table class="plain">
+      <thead><tr><th>The question</th><th>Pattern</th><th>Layer</th></tr></thead>
+      <tbody>
+        <tr><td>Why does billing work this way?</td><td>Lookup</td><td>Graph</td></tr>
+        <tr><td>If I change this requirement, what breaks?</td><td>Traversal</td><td>Graph</td></tr>
+        <tr><td>What did anyone say about intercompany?</td><td>Similarity</td><td>Vectors, then graph</td></tr>
+        <tr><td>Which deliverables lack approval evidence?</td><td>Query</td><td>Graph</td></tr>
+        <tr><td>What did we believe in March that is no longer true?</td><td>Temporal</td><td>Event log</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Every fact is a typed, addressable object.</h2>
+      <p class="lede">Session, evidence, requirement, conflict, decision, fit theme, delta item, blueprint section, test artifact, interface, risk, deliverable. Every node carries state, confidence, provenance, as-of, confirmed-by and supersedes. An object missing any of them cannot be promoted to memory.</p>
+    </div>
+    <div class="grid grid-2" style="align-items:center">
+      <div class="stack">
+        <p><span class="pill">proposed</span> → <span class="pill">confirmed</span> → <span class="pill">superseded</span></p>
+        <p class="muted">Only confirmed objects are memory. A draft is always labelled a draft.</p>
+      </div>
+      <p class="note">IDs are never reused or renumbered. In the field, a renumbering done outside Nexora silently broke 278 conflict citations. Nexora's counter makes that failure impossible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head"><h2>From a workshop to a signed blueprint.</h2></div>
+    <ol class="steps">
+      <li><h4>Ingest</h4><p>Parse, hash and chunk each session; flag capture gaps. Idempotent and resumable. A shared room microphone is flagged, never credited as a speaker.</p></li>
+      <li><h4>Extract</h4><p>One requirement per node, never compound, each cited to its evidence. Scored against hand-written expert cases; on a weak score it stops.</p></li>
+      <li><h4>Detect and fit</h4><p>Contradictions across sessions by exhaustive review, not similarity search. Themes checked against a pinned Best Practices baseline.</p></li>
+      <li class="gate"><h4>Adjudicate</h4><p>A ruling pack goes to the owner: both positions, the evidence, a labelled root-cause hypothesis, candidate rulings. The ruling binds.</p></li>
+      <li><h4>Graph</h4><p>Confirmed facts and rulings become nodes and edges in the property graph, so Aiden can walk them and the impact of any change can be traced.</p></li>
+      <li class="gate"><h4>Blueprint</h4><p>Assembled from fits and rulings; signed, then immutable. The signed version stays retrievable byte for byte, for as long as the system runs.</p></li>
+      <li class="gate"><h4>Regenerate</h4><p>Scoped rebuilds: tests, change impact, BPMN, training. Only what the ruling touches; a person reviews the diff and commits.</p></li>
+      <li><h4>Controls</h4><p>Citation check, format steward, test evaluator, value manifest. Each one refuses rather than guesses, and says in plain words why it refused.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid-5-7" style="align-items:start">
+    <div class="stack">
+      <h2>The Gatekeeper is the only way into memory.</h2>
+      <p class="lede">Six conditions, checked twice: the application explains every refusal in plain language, and a database trigger guarantees it. A test fails if the two ever disagree.</p>
+    </div>
+    <table class="plain ids">
+      <thead><tr><th>#</th><th>Condition</th><th>Why it exists</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>A named person confirmed it</td><td>Machine confidence is not ratification.</td></tr>
+        <tr><td>2</td><td>Requirements and rulings cite evidence</td><td>Without a citation it asserts what the record cannot support.</td></tr>
+        <tr><td>3</td><td>Every citation resolves</td><td>A citation pointing at nothing reads as support, so it is worse than none.</td></tr>
+        <tr><td>4</td><td>No superseded ground beneath it</td><td>Otherwise it is a confident fact on a decision that no longer holds.</td></tr>
+        <tr><td>5</td><td>Rulings carry rationale and rejected options</td><td>Six months on, the question is always "did we consider X?"</td></tr>
+        <tr><td>6</td><td>Confidence is stated</td><td>An unqualified assertion is the dangerous kind.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head"><h2>Those who decide, and those who do, are kept apart.</h2></div>
+    <div class="grid grid-7-5" style="align-items:start">
+      <table class="plain">
+        <thead><tr><th>Role</th><th>Rule</th><th>Override</th><th>Sign</th><th>Commit</th><th>Produce</th><th>Read</th></tr></thead>
+        <tbody>
+          <tr><td>Process expert</td><td>Yes</td><td>Yes</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr>
+          <tr><td>Process owner</td><td>Yes</td><td>Yes</td><td>Yes</td><td>—</td><td>—</td><td>Yes</td></tr>
+          <tr><td>Program lead</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>—</td><td>Yes</td></tr>
+          <tr><td>Change and training lead</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Test lead</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>Viewer</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+      <div class="claims" style="grid-template-columns:1fr">
+        <div><h4>Every ruling has a name</h4><p>Rulings bind, so each names a person who can be asked why.</p></div>
+        <div><h4>Reversal is supersession</h4><p>A new ruling replaces the old; the old stays readable in full.</p></div>
+        <div><h4>Refused before written</h4><p>A test lead attempting a ruling is stopped before anything reaches the record.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Signed means signed. Change means a new version.</h2>
+      <p class="lede">When a ruling lands, only the sections it touches are rebuilt. The rest stays byte-identical, and v1.0 stays retrievable forever.</p>
+    </div>
+    <div class="bp" aria-label="Blueprint versions: a ruling rebuilds only the sections it touches">
+      <span class="lab">v1.0 · signed</span><span class="cell">BP-1.1</span><span class="cell">BP-1.2</span><span class="cell">BP-2.1</span><span class="cell">BP-2.4</span><span class="cell">BP-3.2</span><span class="cell">BP-4.1</span>
+      <span class="lab" style="color:var(--seal)">a ruling lands</span><span class="state">identical</span><span class="state">identical</span><span class="state">identical</span><span class="state hot">rebuilt</span><span class="state hot">rebuilt</span><span class="state">identical</span>
+      <span class="lab">v1.1 · draft</span><span class="cell draft">BP-1.1</span><span class="cell draft">BP-1.2</span><span class="cell draft">BP-2.1</span><span class="cell rebuilt">BP-2.4</span><span class="cell rebuilt">BP-3.2</span><span class="cell draft">BP-4.1</span>
+    </div>
+    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(4,1fr)">
+      <div><h4>Immutable</h4><p>v1.0 stays retrievable byte for byte, forever.</p></div>
+      <div><h4>Scoped</h4><p>Only what the ruling touches is rebuilt.</p></div>
+      <div><h4>Committed</h4><p>A person reviews the diff and commits it.</p></div>
+      <div><h4>Governed</h4><p>Each change feeds the change control board.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Tests that prove your design, not SAP's standard.</h2>
+      <p class="lede">A pack that runs green and proves nothing is refused.</p>
+    </div>
+    <ol class="steps" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+      <li><h4>Test plan</h4><p>Cycles, coverage and traceability from the signed blueprint. Test lead approves.</p></li>
+      <li><h4>Test scenarios</h4><p>One per process variant, each with an outcome a tester can see. Process owner approves.</p></li>
+      <li><h4>Test cases</h4><p>Steps, test data and the negative cases each rule implies. Test lead approves.</p></li>
+      <li><h4>Results read</h4><p>Results in, coverage-weighted maturity out, anomalies flagged. You sign the read.</p></li>
+    </ol>
+    <div class="claims" style="margin-top:48px">
+      <div><h4>Every section has a test; critical sections have two</h4><p>An untested section is named up front, not discovered in UAT when it is expensive.</p></div>
+      <div><h4>At least fifteen percent are negative</h4><p>A rule that forbids something gets a test that tries it. In the field, 51% of 96 seeds were negative.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>When something changes, see everything it touches.</h2></div>
+    <div class="grid grid-3">
+      <div class="rule-ink" style="padding-top:20px"><h3>Change Navigator</h3><p class="muted" style="margin-top:10px">Every artifact a change touches, with its next version. The bar is 95% recall: a miss is the failure; an extra is noise a person can discard.</p></div>
+      <div class="rule-ink" style="padding-top:20px"><h3>Change plan</h3><p class="muted" style="margin-top:10px">Who is affected and how they'll react: named groups, today's real practice, honest resistance, then training mapped to ADKAR stages with behavioural objectives.</p></div>
+      <div class="rule-ink" style="padding-top:20px"><h3>Process Cartographer</h3><p class="muted" style="margin-top:10px">The current process drawn in BPMN 2.0, with layout, so it opens in Signavio, Cloud ALM, Camunda or Visio. Every step carries the requirement and ruling behind it.</p></div>
+    </div>
+    <p class="note" style="margin-top:40px">Honest about coverage: "We can trace 7 affected artifacts; coverage in P2P is 40%, so there may be more."</p>
+  </div>
+</section>
+
+<section class="section on-ink">
+  <div class="wrap">
+    <div class="section-head"><h2>Eighteen agents. Three roles. No self-approval.</h2></div>
+    <div class="grid grid-3">
+      <div class="rule-top"><h3>Authors <span class="muted" style="font-size:.6em">12</span></h3><p class="muted" style="margin-top:10px">Draft the work. Never approve it. Extractor, conflict detector, fit mapper, blueprint assembler, regenerator, test authors, change impact, brand steward.</p></div>
+      <div class="rule-top"><h3>Reviewers <span class="muted" style="font-size:.6em">2</span></h3><p class="muted" style="margin-top:10px">Check every draft, on a different model from its author. The auditor confirms each citation supports its claim; the judge rules on quality.</p></div>
+      <div class="rule-top"><h3>Readers <span class="muted" style="font-size:.6em">4</span></h3><p class="muted" style="margin-top:10px">Answer from the record. Never write. Aiden, navigator, documentarian, cartographer — every answer carries its citations.</p></div>
+    </div>
+    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(3,1fr)">
+      <div><h4>Model choice is configuration</h4><p>Each agent's provider and model is set in one file, never in code.</p></div>
+      <div><h4>Evals on every agent</h4><p>A regression gate runs on any model or prompt change.</p></div>
+      <div><h4>Two providers, proven</h4><p>The runtime is trusted only after two vendors pass with real keys.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fit is measured against a baseline you declare.</h2>
+      <p class="lede">Before a theme can be called standard or a gap, Nexora needs to know what standard means here. You declare the slice — platform, edition, release, region and the process areas in scope — and that pinned baseline is what every fit decision is checked against, so "fit to standard" means something specific rather than someone's recollection.</p>
+    </div>
+    <div class="grid grid-7-5" style="align-items:start">
+      <div class="frame"><img src="/nexora/assets/img/standards.d1b5d720.webp" alt="The standards corpus: declaring a slice by platform, edition, release and region, with the copyright switch set to references only" width="1280" height="630" loading="lazy"></div>
+      <div class="claims" style="grid-template-columns:1fr;gap:16px">
+        <div><h4>You dictate the scope</h4><p>No baseline is assumed. Nothing is pulled until you declare what belongs in it.</p></div>
+        <div><h4>References only, by default</h4><p>The corpus stores scope item IDs, titles, taxonomy and your own embeddings. SAP's copyrighted descriptions are not copied — the safe default, and the one we ship.</p></div>
+        <div><h4>Pinned, so fit is reproducible</h4><p>A theme checked last month was checked against the same release it would be checked against today.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-ink">
+  <div class="wrap grid grid-5-7" style="align-items:start">
+    <div class="stack">
+      <h2>Sovereign memory, portable by design.</h2>
+      <p class="lede">Every project declares one origin: fresh, inherit or consolidate. Consolidation raises every disagreement as a conflict and never picks a winner by precedence. Read-across stays within one customer — refused in code, and again by the database.</p>
+    </div>
+    <table class="plain ids">
+      <thead><tr><th>Export</th><th>What it is</th></tr></thead>
+      <tbody>
+        <tr><td>events.jsonl</td><td>Append-only log, the source of truth</td></tr>
+        <tr><td>graph.jsonld</td><td>Nodes and edges, regenerable</td></tr>
+        <tr><td>manifest.json</td><td>Counts and round-trip proof</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section on-seal">
+  <div class="wrap">
+    <h2>Nothing asserted that cannot be cited.</h2>
+    <div class="claims" style="margin-top:40px;color:#fff">
+      <div style="border-top-color:rgba(255,255,255,.2)"><h4>Citation check</h4><p style="color:rgba(255,255,255,.8)">Confirms the cited passage actually supports the claim before it is promoted.</p></div>
+      <div style="border-top-color:rgba(255,255,255,.2)"><h4>Format steward</h4><p style="color:rgba(255,255,255,.8)">Restyles form only, with meaning guarded. Client-facing output needs a person.</p></div>
+      <div style="border-top-color:rgba(255,255,255,.2)"><h4>Test evaluator</h4><p style="color:rgba(255,255,255,.8)">Turns results into coverage-weighted maturity and flags anomalies for sign-off.</p></div>
+      <div style="border-top-color:rgba(255,255,255,.2)"><h4>Value manifest</h4><p style="color:rgba(255,255,255,.8)">Each value claim is measured from the record or attributed to who said it. Unbacked claims are refused; AI spend is reported against value.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-brand"><img src="/nexora/assets/brand/logo-tagline.937c2d3f.svg" alt="Nexora — own the program record" width="562" height="152">
+      <p class="byline">A <a href="/">Nibarc</a> product &mdash; SAP-native strategy, transformation and agents.</p></div>
+    <nav>
+      <a href="/nexora/brief/">Brief</a><a href="/nexora/forge/">Forge</a><a href="/nexora/manage/">Manage</a><a href="/nexora/how-it-works/">How it works</a>
+      <a href="/nexora/deliverables/">Deliverables</a><a href="/nexora/contact/">Contact</a><a href="/nexora/privacy/">Privacy</a>
+      <a href="mailto:info@nibarc.com">info@nibarc.com</a>
+    </nav>
+  </div>
+</footer>
+<script src="/nexora/assets/js/site.87232f4a.js"></script>
+</body>
+</html>
