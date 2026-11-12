@@ -405,6 +405,6 @@ details.mfull summary:hover,details.mfull[open] summary{color:var(--seal)}
 details.mfull .mnote{margin-top:6px}
 @media (max-width:900px){.msrow{grid-template-columns:40px 1fr 110px;gap:12px}.msrow .ds,.msrow .nx{display:none}}
 
-.site-footer .byline{margin:14px 0 0;font-size:14px;color:var(--on-ink-mute)}
-.site-footer .byline a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
-.site-footer .byline a:hover{border-bottom-color:#fff}
+.site-footer .byline{margin:16px 0 0;font-size:14.5px;color:var(--muted);max-width:46ch}
+.site-footer .byline a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--seal)}
+.site-footer .byline a:hover{color:var(--seal)}
