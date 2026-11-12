@@ -51,3 +51,15 @@ Product screenshots use fictional demonstration data (Suncrest Juice Co. and
 Meridian Foods). No real customer, person, project or system appears anywhere
 on either site. Keep it that way when swapping screens — see the anonymisation
 note in `src/build.py`.
+
+## Previewing locally
+
+Double-click `serve.command`, or:
+
+```sh
+cd site && python3 -m http.server 8787
+```
+
+Serve from `site/`, not the repo root — the pages use absolute paths (`/assets/...`,
+`/about/`), which is what Netlify serves. Opening `site/index.html` straight from
+Finder (`file://`) will not work for the same reason.
