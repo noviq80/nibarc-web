@@ -197,3 +197,10 @@ h3{font-size:24px;letter-spacing:-.025em;font-weight:600}
   .inds{columns:1}
   .nb-foot .cols{grid-template-columns:1fr}
 }
+
+/* ---- justified body columns ---- */
+.g2 .lede,.g3 .lede,.prose p{text-align:justify;-webkit-hyphens:auto;hyphens:auto}
+@media (max-width:680px){.g2 .lede,.g3 .lede,.prose p{text-align:left;hyphens:manual}}
+
+/* section-head ledes run the full measure rather than stopping short */
+.head .lede{max-width:none}

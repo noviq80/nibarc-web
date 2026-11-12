@@ -279,7 +279,7 @@ ABOUT = phead("About Nibarc",
     </div>
     <div class="g3">
       <div class="blk"><h3>Decisions closed</h3><p>How many open rulings your program is still carrying, and how fast that number falls.</p></div>
-      <div class="blk"><h3>Traceability</h3><p>What share of requirements, designs and code can be walked back to a named source.</p></div>
+      <div class="blk"><h3>Traceability</h3><p>What share of requirements, designs and code traces to a named source.</p></div>
       <div class="blk"><h3>Cost of delay</h3><p>What each unresolved decision costs per week — stated, not implied.</p></div>
     </div>
   </div>
@@ -428,10 +428,24 @@ TERMS = phead("Terms", "Terms of use", "The terms on which this website is provi
 </div></section>
 """
 
+SRC = pathlib.Path(__file__).resolve().parent
+
+def sync_static():
+    """Copy hand-authored css/js from src/ into the publish tree.
+    Keeps one canonical copy, so an edit can never fork into a stale twin."""
+    import shutil
+    for name, sub in (("nibarc.css", "css"), ("nibarc.js", "js")):
+        dest_dir = OUT / "assets" / sub
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        for stale in dest_dir.glob(pathlib.Path(name).stem + ".*"):
+            stale.unlink()
+        shutil.copy2(SRC / name, dest_dir / name)
+
 if __name__ == "__main__":
     def f(s):
         return (s.replace("{EMAIL}", EMAIL).replace("{PHTEL}", PHTEL)
                  .replace("{PHONE}", PHONE).replace("{PLACE}", PLACE))
+    sync_static()
     page("/", "Nibarc — SAP-native strategy, transformation and agents",
          "Nibarc advises operating leaders on SAP S/4HANA and BTP, and builds the software that carries the work. Home of Nexora.", f(HOME))
     page("/about/", "About — Nibarc",
