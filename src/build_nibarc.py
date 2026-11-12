@@ -6,7 +6,7 @@ OUT    = pathlib.Path(__file__).resolve().parent.parent / "site"
 EMAIL  = "info@nibarc.com"
 PHONE  = "+1 (408) 782-4421"
 PHTEL  = "+14087824421"
-PLACE  = "Texas, USA"
+PLACE  = "San Diego, CA"
 DOMAIN = "nibarc.com"
 
 NAV = [("/about/", "About"),
