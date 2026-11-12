@@ -366,7 +366,7 @@ AF = phead("03 &middot; Practice",
         <p class="lede">Our own product is the clearest statement of how we think agents should behave on an enterprise program: read widely, produce real artefacts, cite everything, and stop at a human.</p>
         <div class="btns"><a class="btn btn-solid" href="/nexora/">See Nexora</a></div>
       </div>
-      <div class="prodshot"><img src="/assets/img/nexora-brief.webp" alt="Nexora's Brief, showing agent output with citations awaiting a human ruling" width="1280" height="623" loading="lazy"></div>
+      <div class="prodshot"><img src="/assets/img/nexora-proof.webp" alt="Nexora&#39;s Forge: the evidence pack behind a generated build — acceptance criteria, unit tests and screenshots, each content-hashed" width="1280" height="623" loading="lazy"></div>
     </div>
   </div>
 </section>
