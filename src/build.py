@@ -29,11 +29,20 @@ def shell(title, desc, body, path):
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script defer data-domain="{DOMAIN}" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
+<div class="parent-bar">
+  <div class="wrap">
+    <a class="pb-home" href="//ROOT" aria-label="Nibarc home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M19 88 V47 A31 31 0 0 1 81 47 V88" fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round"/><path d="M40 88 V54 A12 12 0 0 1 64 54 V59" fill="none" stroke="#7D92FF" stroke-width="10" stroke-linecap="round"/><circle cx="64" cy="74" r="6.5" fill="#FFFFFF"/></svg>
+      <b>nibarc</b>
+    </a>
+    <span class="pb-note">Nexora is a product of <a href="//ROOT">Nibarc</a> &mdash; SAP-native strategy, transformation and agents.</span>
+  </div>
+</div>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Nexora home"><img src="/assets/brand/logo.svg" alt="Nexora" width="448" height="102"></a>

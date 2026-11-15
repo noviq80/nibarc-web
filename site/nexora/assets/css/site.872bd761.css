@@ -408,3 +408,15 @@ details.mfull .mnote{margin-top:6px}
 .site-footer .byline{margin:16px 0 0;font-size:14.5px;color:var(--muted);max-width:46ch}
 .site-footer .byline a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--seal)}
 .site-footer .byline a:hover{color:var(--seal)}
+
+/* ---- parent bar: route back to Nibarc ---- */
+.parent-bar{background:#141A38;color:#fff}
+.parent-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:44px}
+.pb-home{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:#fff;flex:none}
+.pb-home svg{width:21px;height:21px;display:block}
+.pb-home b{font-family:"Baloo 2",var(--sans);font-weight:700;font-size:19px;letter-spacing:-.01em;line-height:1}
+.pb-home:hover b{color:#7D92FF}
+.pb-note{font-family:var(--sans);font-size:13px;color:#9AA6C8;text-align:right}
+.pb-note a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.32)}
+.pb-note a:hover{border-bottom-color:#7D92FF;color:#7D92FF}
+@media (max-width:760px){.pb-note{display:none}}
