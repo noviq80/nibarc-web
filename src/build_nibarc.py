@@ -14,10 +14,11 @@ NAV = [("/about/", "About"),
        ("/digital-transformation/", "Digital Transformation"),
        ("/agentic-framework/", "Agentic Framework")]
 
-MARK = ('<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M10 88 C 10 44.9, 44.9 10, 88 10" '
-        'fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>'
-        '<circle cx="88" cy="10" r="11" fill="#0E8F82"/></svg>')
-MARK_D = MARK.replace('fill="#0E8F82"', 'fill="#3AD6C4"')
+MARK = ('<svg viewBox="0 0 100 100" aria-hidden="true">'
+        '<path d="M19 88 V47 A31 31 0 0 1 81 47 V88" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round"/>'
+        '<path d="M40 88 V54 A12 12 0 0 1 64 54 V59" fill="none" stroke="#3D5BF5" stroke-width="10" stroke-linecap="round"/>'
+        '<circle cx="64" cy="74" r="6.5" fill="currentColor"/></svg>')
+MARK_D = MARK.replace('#3D5BF5', '#7D92FF')
 
 def shell(title, desc, body, path):
     nav = "".join('<a href="%s"%s>%s</a>' % (h, ' class="here"' if h == path else '', t) for h, t in NAV)
@@ -39,7 +40,7 @@ def shell(title, desc, body, path):
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/nibarc.css">
 <script defer data-domain="{DOMAIN}" src="https://plausible.io/js/script.js"></script>
 </head>
@@ -122,7 +123,7 @@ def page(path, title, desc, body):
 
 def phead(kicker, h1, lede):
     return ('<section class="hero on-dark">\n'
-            '  <svg class="heroarc" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 88 C 10 44.9, 44.9 10, 88 10" fill="none" stroke-width="7" stroke-linecap="round"/><circle cx="88" cy="10" r="5.5"/></svg>\n'
+            '  <svg class="heroarc" viewBox="0 0 100 100" aria-hidden="true"><path d="M19 88 V47 A31 31 0 0 1 81 47 V88" fill="none" stroke-width="7" stroke-linecap="round"/><circle cx="64" cy="74" r="5"/></svg>\n'
             '  <div class="wrap">\n'
             '    <span class="kicker">' + kicker + '</span>\n'
             '    <h1>' + h1 + '</h1>\n'
@@ -146,7 +147,7 @@ CTA = """
 
 HOME = """
 <section class="hero on-dark">
-  <svg class="heroarc" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 88 C 10 44.9, 44.9 10, 88 10" fill="none" stroke-width="7" stroke-linecap="round"/><circle cx="88" cy="10" r="5.5"/></svg>
+  <svg class="heroarc" viewBox="0 0 100 100" aria-hidden="true"><path d="M19 88 V47 A31 31 0 0 1 81 47 V88" fill="none" stroke-width="7" stroke-linecap="round"/><circle cx="64" cy="74" r="5"/></svg>
   <div class="wrap">
     <span class="kicker">S/4HANA &middot; SAP BTP &middot; Agents</span>
     <h1>The SAP firm that builds its own tools.</h1>

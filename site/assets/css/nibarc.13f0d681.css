@@ -1,10 +1,10 @@
 /* Nibarc — company site. Graphite + jade, grotesk, cool neutrals. */
 :root{
-  --ink:#0A0E12; --ink-2:#131A21; --ink-3:#1E262E;
+  --ink:#141A38; --ink-2:#1B2347; --ink-3:#242E59;
   --paper:#FFFFFF; --mist:#EFF2F4; --line:#DCE2E7;
   --rule-d:rgba(255,255,255,.13);
-  --text:#0A0E12; --muted:#5B6772; --muted-d:#9AA7B2;
-  --signal:#0E8F82; --signal-d:#3AD6C4;
+  --text:#141A38; --muted:#576078; --muted-d:#9AA6C8;
+  --signal:#3D5BF5; --signal-d:#7D92FF;
   --display:'Archivo',system-ui,-apple-system,sans-serif;
   --body:'Inter',system-ui,-apple-system,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,monospace;
@@ -26,7 +26,7 @@ a{color:inherit}
 .nb-head .wrap{display:flex;align-items:center;gap:28px;height:74px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex:none}
 .brand svg{width:26px;height:26px}
-.brand b{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.035em}
+.brand b{font-family:'Baloo 2',var(--display);font-weight:700;font-size:24.5px;letter-spacing:-.01em}
 .nb-nav{margin-left:auto;display:flex;align-items:center;gap:26px}
 .nb-nav a{font-size:15px;text-decoration:none;color:var(--muted);white-space:nowrap}
 .nb-nav a:hover{color:var(--text)}
@@ -44,7 +44,7 @@ a{color:inherit}
 .btn-line{border-color:var(--line);color:var(--text)}
 .btn-line:hover{border-color:var(--ink)}
 .on-dark .btn-solid{background:var(--signal-d);color:var(--ink);font-weight:600}
-.on-dark .btn-solid:hover{background:#56E3D3}
+.on-dark .btn-solid:hover{background:#97A9FF}
 .on-dark .btn-line{border-color:var(--rule-d);color:#fff}
 .on-dark .btn-line:hover{border-color:#fff}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
@@ -78,7 +78,7 @@ h3{font-size:24px;letter-spacing:-.025em;font-weight:600}
 .hero .lede{margin-top:26px;max-width:60ch}
 .heroarc{position:absolute;top:-14%;right:-16%;width:min(820px,78vw);height:auto;z-index:1;opacity:.5}
 .heroarc path{stroke:rgba(255,255,255,.07)}
-.heroarc circle{fill:rgba(58,214,196,.18)}
+.heroarc circle{fill:rgba(125,146,255,.2)}
 
 /* ---- stat strip ---- */
 .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule-d);
