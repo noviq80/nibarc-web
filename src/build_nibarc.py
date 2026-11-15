@@ -37,7 +37,7 @@ def shell(title, desc, body, path):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://{DOMAIN}{PATH}">
 <meta name="theme-color" content="#0A0E12">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -435,12 +435,14 @@ def sync_static():
     """Copy hand-authored css/js from src/ into the publish tree.
     Keeps one canonical copy, so an edit can never fork into a stale twin."""
     import shutil
-    for name, sub in (("nibarc.css", "css"), ("nibarc.js", "js")):
+    for name, sub in (("nibarc.css", "css"), ("nibarc.js", "js"), ("favicon.svg", "brand")):
         dest_dir = OUT / "assets" / sub
         dest_dir.mkdir(parents=True, exist_ok=True)
         for stale in dest_dir.glob(pathlib.Path(name).stem + ".*"):
             stale.unlink()
         shutil.copy2(SRC / name, dest_dir / name)
+    # keep the bare /favicon.svg too, for browsers that probe the default path
+    shutil.copy2(SRC / "favicon.svg", OUT / "favicon.svg")
 
 if __name__ == "__main__":
     def f(s):
