@@ -255,7 +255,7 @@ how = """
       <span class="lab" style="color:var(--seal)">a ruling lands</span><span class="state">identical</span><span class="state">identical</span><span class="state">identical</span><span class="state hot">rebuilt</span><span class="state hot">rebuilt</span><span class="state">identical</span>
       <span class="lab">v1.1 · draft</span><span class="cell draft">BP-1.1</span><span class="cell draft">BP-1.2</span><span class="cell draft">BP-2.1</span><span class="cell rebuilt">BP-2.4</span><span class="cell rebuilt">BP-3.2</span><span class="cell draft">BP-4.1</span>
     </div>
-    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(4,1fr)">
+    <div class="claims c4" style="margin-top:48px">
       <div><h4>Immutable</h4><p>v1.0 stays retrievable byte for byte, forever.</p></div>
       <div><h4>Scoped</h4><p>Only what the ruling touches is rebuilt.</p></div>
       <div><h4>Committed</h4><p>A person reviews the diff and commits it.</p></div>
@@ -270,7 +270,7 @@ how = """
       <h2>Tests that prove your design, not SAP's standard.</h2>
       <p class="lede">A pack that runs green and proves nothing is refused.</p>
     </div>
-    <ol class="steps" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+    <ol class="steps s4">
       <li><h4>Test plan</h4><p>Cycles, coverage and traceability from the signed blueprint. Test lead approves.</p></li>
       <li><h4>Test scenarios</h4><p>One per process variant, each with an outcome a tester can see. Process owner approves.</p></li>
       <li><h4>Test cases</h4><p>Steps, test data and the negative cases each rule implies. Test lead approves.</p></li>
@@ -303,7 +303,7 @@ how = """
       <div class="rule-top"><h3>Reviewers <span class="muted" style="font-size:.6em">2</span></h3><p class="muted" style="margin-top:10px">Check every draft, on a different model from its author. The auditor confirms each citation supports its claim; the judge rules on quality.</p></div>
       <div class="rule-top"><h3>Readers <span class="muted" style="font-size:.6em">4</span></h3><p class="muted" style="margin-top:10px">Answer from the record. Never write. Aiden, navigator, documentarian, cartographer — every answer carries its citations.</p></div>
     </div>
-    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(3,1fr)">
+    <div class="claims c3" style="margin-top:48px">
       <div><h4>Model choice is configuration</h4><p>Each agent's provider and model is set in one file, never in code.</p></div>
       <div><h4>Evals on every agent</h4><p>A regression gate runs on any model or prompt change.</p></div>
       <div><h4>Two providers, proven</h4><p>The runtime is trusted only after two vendors pass with real keys.</p></div>
@@ -901,7 +901,7 @@ FORGE = """
       <p class="lede">A signed blueprint section becomes a specification with numbered acceptance criteria, each cited back to the session and second where it was asked for. Forge builds against that specification, checks its own work, and stops at your approval.</p>
     </div>
     <div class="frame"><img src="/assets/img/forge-build.webp" alt="Forge stage four: the specification with numbered acceptance criteria beside the generated CDS view, with the citation chain beneath" width="1280" height="623" loading="lazy"></div>
-    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(3,1fr)">
+    <div class="claims c3" style="margin-top:48px">
       <div><h4>The spec names what was asked</h4><p>Four criteria, each traced through requirement, ruling and blueprint section to the sentence someone said.</p></div>
       <div><h4>Built from the delta</h4><p>Work orders come from what changed — new from spec, and what already exists in code.</p></div>
       <div><h4>It stops at your approval</h4><p>Write access is scoped to one system, one package, and nothing activates without a person.</p></div>
@@ -936,7 +936,7 @@ FORGE = """
       <p class="lede">After the build is tested, Forge records the end-to-end journey once in the live system. New users walk through it — the final process, step by step, exactly as it runs in SAP, with the real screens rather than a slide about them. Training stops being a document written months before go-live and becomes a recording of the system you actually built.</p>
     </div>
     <div class="frame"><img src="/assets/img/forge-learn.webp" alt="Forge stage six: a seven-step order-to-cash training journey beside the live SAP Fiori screen for each step" width="1280" height="623" loading="lazy"></div>
-    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(3,1fr)">
+    <div class="claims c3" style="margin-top:48px">
       <div><h4>Recorded from the real system</h4><p>Each step shows the actual transaction or Fiori app, on masked data.</p></div>
       <div><h4>Published, with a version</h4><p>Trainees see only the journey. Re-curate it when the process changes.</p></div>
       <div><h4>The same record underneath</h4><p>The training follows the process that was signed, so it cannot drift from the design.</p></div>
@@ -1000,7 +1000,7 @@ MANAGE = """
       <p class="lede">A program is only as decisive as its ownership. Each business domain has exactly one owner — a process expert whose ruling on that area's conflicts is binding — and Nexora will tell you how many of your areas actually have one. Ownership is date-delimited, so a handover is recorded rather than overwritten, and you can read the tenure history long after the person has moved on.</p>
     </div>
     <div class="frame"><img src="/assets/img/process-areas.webp" alt="Process areas: each domain owned, with owner, tenure start, and hand over, end tenure and history actions" width="1280" height="623" loading="lazy"></div>
-    <div class="claims" style="margin-top:48px;grid-template-columns:repeat(3,1fr)">
+    <div class="claims c3" style="margin-top:48px">
       <div><h4>Proposed from the record</h4><p>Nexora reads the areas already tagged in the record and proposes them; a human still activates each one.</p></div>
       <div><h4>Hand over, don't overwrite</h4><p>Ending one tenure and starting another is an event in the record, with both sets of dates kept.</p></div>
       <div><h4>Unowned means unrulable</h4><p>An area with no owner cannot have its conflicts ruled, which is why the count of owned areas is shown up front.</p></div>

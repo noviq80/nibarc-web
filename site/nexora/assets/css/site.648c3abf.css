@@ -164,7 +164,11 @@ h1+.lede,h2+.lede,h3+.lede{margin-top:20px}
 .claims h4{margin-bottom:6px}
 .claims p{color:var(--muted);font-size:16px}
 .on-ink .claims p{color:var(--on-ink-mute)}
-@media (max-width:760px){.claims{grid-template-columns:1fr}}
+.claims.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.claims.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.steps.s4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.claims.c4,.steps.s4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.claims,.claims.c3,.claims.c4,.steps.s4{grid-template-columns:1fr}}
 
 /* ---------- three-panel model ---------- */
 .model{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--on-ink-rule);border-radius:var(--r-lg);overflow:hidden}
