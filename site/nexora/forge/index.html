@@ -66,7 +66,7 @@
       <p class="lede">Forge reaches SAP only through the Nexora Agent Platform — our own access layer, and the single lane every read and write travels down. It reads freely. It writes only on approval. It refuses production. Each project states plainly what the connection is currently permitted to do, and the system check that proved it.</p>
     </div>
     <div class="grid grid-7-5" style="align-items:start">
-      <div class="frame"><img src="/nexora/assets/img/forge-connect.115afa27.webp" alt="Forge stage one: the source system connected through the agent platform, with read, write and production usage stated separately" width="1280" height="623" loading="eager" fetchpriority="high"></div>
+      <div class="frame"><img src="/nexora/assets/img/forge-connect.8eecac00.webp" alt="Forge stage one: a failed system check stated in the open, with read, write and production each shown with what the connection may currently do" width="1280" height="623" loading="eager" fetchpriority="high"></div>
       <div class="claims" style="grid-template-columns:1fr;gap:16px">
         <div><h4>Read, write and production, stated separately</h4><p>Not one permission but three, each shown with the check that last proved it. A failed check downgrades what Forge will do, in the open.</p></div>
         <div><h4>Try it without connecting us to anything</h4><p>Forge runs against an exported copy of your system. Everything read stays readable and the analysis is real — and sync, checks on SAP, approve and activate switch themselves off until a live check passes. The banner saying so never leaves the screen.</p></div>
@@ -83,7 +83,7 @@
       <h2>Four hundred and ninety-five custom objects. Two-thirds of them nobody calls.</h2>
       <p class="lede">Forge reads every custom object, grades it against clean core, and counts how often it actually ran in production from your own SCMON window. The expensive truth usually arrives early: most of the estate is not load-bearing. Retiring something is cheaper than migrating it, and now you can prove which is which.</p>
     </div>
-    <div class="frame"><img src="/nexora/assets/img/forge-scan.842c5eb0.webp" alt="Forge stage two: the custom code inventory, sized by production calls, with clean-core grade, usage and readability counts" width="1280" height="623" loading="lazy"></div>
+    <div class="frame"><img src="/nexora/assets/img/forge-scan.c6e9670e.webp" alt="Forge stage two: the custom code inventory, sized by production calls, with clean-core grade, usage and readability counts" width="1280" height="623" loading="lazy"></div>
     <div class="figures" style="margin-top:48px">
       <div><div class="fig">330</div><p>objects with no calls at all in the usage window</p></div>
       <div><div class="fig">6.2</div><p>clean-core rating across the estate, graded object by object</p></div>
@@ -129,7 +129,7 @@
         <div><h4>Ranked by what it would cost you to be wrong</h4><p>A priority score from production load, clean-core grade and S/4 impact, so the first hundred decisions are the hundred that matter.</p></div>
         <div><h4>Four hundred and forty-one at a time, if you want</h4><p>Decide one object or every object matching a filter. Either way the reason is stored with the decision and the decision is dated.</p></div>
       </div>
-      <div class="frame"><img src="/nexora/assets/img/forge-map.d41646e1.webp" alt="Forge stage three: the decision board, each object with its production usage, S/4 impact, clean-core grade and a proposed disposition" width="1280" height="623" loading="lazy"></div>
+      <div class="frame"><img src="/nexora/assets/img/forge-map.d52c67af.webp" alt="Forge stage three: the decision board, each object with its production usage, S/4 impact, clean-core grade and a proposed disposition" width="1280" height="623" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -141,7 +141,7 @@
       <h2>Before Forge rewrites a line, it writes the specification nobody ever wrote.</h2>
       <p class="lede">A sixteen-section technical specification, recovered from the code as it runs today: what it does, what it touches, what it posts, what it checks, what it costs to run. It is the document your original developer did not leave behind — and for most objects it is worth more than the rewrite.</p>
     </div>
-    <div class="frame"><img src="/nexora/assets/img/forge-build.44ba8b95.webp" alt="Forge stage four: the as-is specification beside the rewritten code, with the original and the candidate side by side" width="1280" height="623" loading="lazy"></div>
+    <div class="frame"><img src="/nexora/assets/img/forge-build.6752a21e.webp" alt="Forge stage four: the original read from SAP beside the candidate written by the agent, with every changed block marked in the code itself" width="1280" height="623" loading="lazy"></div>
     <div class="claims c3" style="margin-top:48px">
       <div><h4>It finds the bugs you have been running for years</h4><p>In one 91-line pricing report: totals that mix currencies without converting, a sum of five arbitrary conditions with no defined business meaning, an authorisation check applied after the row limit so two users get two different answers, and a failure reported as an information message, so no batch job could ever tell error from success.</p></div>
       <div><h4>Every rule quotes the lines it came from</h4><p>The specification ends in a traceability matrix: each rule, and the source lines it rests on, copied from the code Forge holds. Those quotes are checked against the source without a model — the prose is written by an agent, the evidence is verified by machine.</p></div>
@@ -156,7 +156,7 @@
       <h2>Hollow is not a pass.</h2>
       <p class="lede">The rewrite waits behind four of SAP&rsquo;s own checks — syntax, activation, ABAP Unit and ATC with clean core. Until every one has actually run and actually passed, the approve button is not disabled as a courtesy; it is unavailable. Forge will not let you activate something it has only asked a model about.</p>
     </div>
-    <div class="frame"><img src="/nexora/assets/img/forge-proof.9a8e4800.webp" alt="The approval gate: four SAP checks shown unfilled where they have not run, with approve and activate unavailable" width="1280" height="623" loading="lazy"></div>
+    <div class="frame"><img src="/nexora/assets/img/forge-proof.a90a912f.webp" alt="The approval gate: four SAP checks shown unfilled where they have not run, with approve and activate unavailable" width="1280" height="623" loading="lazy"></div>
     <div class="claims" style="margin-top:48px;color:#fff">
       <div style="border-top-color:rgba(255,255,255,.2)"><h4>The agent&rsquo;s account is labelled as the agent&rsquo;s account</h4><p style="color:rgba(255,255,255,.8)">The summary of what changed and why is marked as written by the agent about its own work, with &ldquo;review before approving&rdquo; attached. Forge never passes a model&rsquo;s self-report off as a finding.</p></div>
       <div style="border-top-color:rgba(255,255,255,.2)"><h4>Old and new, side by side, with the changes marked</h4><p style="color:rgba(255,255,255,.8)">The original as SAP holds it against the candidate, every changed block marked in the ABAP itself with a reference you can grep for. Capture the original&rsquo;s output first and compare the two runs.</p></div>
@@ -176,6 +176,7 @@
       <div style="border-top-color:rgba(255,255,255,.3)"><h4>A specification you approve, not a prompt you hope about</h4><p style="color:rgba(255,255,255,.78)">Scope, selection criteria, business rules, output, errors, authorisations, test scenarios — and the open questions the requirement did not answer.</p></div>
       <div style="border-top-color:rgba(255,255,255,.3)"><h4>It ends as a real object on SAP</h4><p style="color:rgba(255,255,255,.78)">Checked on the system and activated into a named package, through the same lane and the same gates as everything else Forge writes.</p></div>
     </div>
+    <div class="frame" style="margin-top:44px"><img src="/nexora/assets/img/forge-genesis.0dff22e2.webp" alt="Forge stage five: a requirement stored exactly as typed with its SHA-256, and the five gates from requirement to activation" width="1280" height="623" loading="lazy"></div>
   </div>
 </section>
 

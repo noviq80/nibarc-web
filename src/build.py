@@ -848,7 +848,7 @@ FORGE = """
       <p class="lede">Forge reaches SAP only through the Nexora Agent Platform — our own access layer, and the single lane every read and write travels down. It reads freely. It writes only on approval. It refuses production. Each project states plainly what the connection is currently permitted to do, and the system check that proved it.</p>
     </div>
     <div class="grid grid-7-5" style="align-items:start">
-      <div class="frame"><img src="/assets/img/forge-connect.webp" alt="Forge stage one: the source system connected through the agent platform, with read, write and production usage stated separately" width="1280" height="623" loading="eager" fetchpriority="high"></div>
+      <div class="frame"><img src="/assets/img/forge-connect.webp" alt="Forge stage one: a failed system check stated in the open, with read, write and production each shown with what the connection may currently do" width="1280" height="623" loading="eager" fetchpriority="high"></div>
       <div class="claims" style="grid-template-columns:1fr;gap:16px">
         <div><h4>Read, write and production, stated separately</h4><p>Not one permission but three, each shown with the check that last proved it. A failed check downgrades what Forge will do, in the open.</p></div>
         <div><h4>Try it without connecting us to anything</h4><p>Forge runs against an exported copy of your system. Everything read stays readable and the analysis is real — and sync, checks on SAP, approve and activate switch themselves off until a live check passes. The banner saying so never leaves the screen.</p></div>
@@ -923,7 +923,7 @@ FORGE = """
       <h2>Before Forge rewrites a line, it writes the specification nobody ever wrote.</h2>
       <p class="lede">A sixteen-section technical specification, recovered from the code as it runs today: what it does, what it touches, what it posts, what it checks, what it costs to run. It is the document your original developer did not leave behind — and for most objects it is worth more than the rewrite.</p>
     </div>
-    <div class="frame"><img src="/assets/img/forge-build.webp" alt="Forge stage four: the as-is specification beside the rewritten code, with the original and the candidate side by side" width="1280" height="623" loading="lazy"></div>
+    <div class="frame"><img src="/assets/img/forge-build.webp" alt="Forge stage four: the original read from SAP beside the candidate written by the agent, with every changed block marked in the code itself" width="1280" height="623" loading="lazy"></div>
     <div class="claims c3" style="margin-top:48px">
       <div><h4>It finds the bugs you have been running for years</h4><p>In one 91-line pricing report: totals that mix currencies without converting, a sum of five arbitrary conditions with no defined business meaning, an authorisation check applied after the row limit so two users get two different answers, and a failure reported as an information message, so no batch job could ever tell error from success.</p></div>
       <div><h4>Every rule quotes the lines it came from</h4><p>The specification ends in a traceability matrix: each rule, and the source lines it rests on, copied from the code Forge holds. Those quotes are checked against the source without a model — the prose is written by an agent, the evidence is verified by machine.</p></div>
@@ -958,6 +958,7 @@ FORGE = """
       <div style="border-top-color:rgba(255,255,255,.3)"><h4>A specification you approve, not a prompt you hope about</h4><p style="color:rgba(255,255,255,.78)">Scope, selection criteria, business rules, output, errors, authorisations, test scenarios — and the open questions the requirement did not answer.</p></div>
       <div style="border-top-color:rgba(255,255,255,.3)"><h4>It ends as a real object on SAP</h4><p style="color:rgba(255,255,255,.78)">Checked on the system and activated into a named package, through the same lane and the same gates as everything else Forge writes.</p></div>
     </div>
+    <div class="frame" style="margin-top:44px"><img src="/assets/img/forge-genesis.webp" alt="Forge stage five: a requirement stored exactly as typed with its SHA-256, and the five gates from requirement to activation" width="1280" height="623" loading="lazy"></div>
   </div>
 </section>
 
